@@ -13,13 +13,19 @@ Where are the words from?
 -------------------------
 
 From the [top 20,000 words][words] in Project Gutenberg by frequency. With a 
-battery of 20k words, that's actually *20^16* bits of entropy!
+battery of 20k words, that's actually *20000^4* bits of entropy (or around 
+    *2^54*)!
 
 [words]:http://en.wiktionary.org/wiki/Wiktionary:Frequency_lists#Project_Gutenberg
 
 Why?
 ----
 
-![To anyone who understands information theory and security and is in an infuriating argument with someone who does not (possibly involving mixed case), I sincerely apologize.][img]
+ * More secure than Supergenpass (I think) against brute-force and rainbow table 
+ attacks (no MD5, many iterations with salts, etc).
+
+ * Easier to type on your mobile phone.
+
+![xkcd][img]
 [img]: http://imgs.xkcd.com/comics/password_strength.png
 
