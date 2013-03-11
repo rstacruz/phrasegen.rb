@@ -24,7 +24,7 @@ class PhraseGen
   # Derives a key from a master password by hashing it multiple times with
   # different salts to prevent rainbow table attacks.
   # See: https://en.wikipedia.org/wiki/PBKDF2
-  def derive(str, iters=2000)
+  def derive(str, iters=4000)
     require 'digest/sha2'
 
     hash = str
