@@ -13,8 +13,8 @@ Where are the words from?
 -------------------------
 
 From the [top 20,000 words][words] in Project Gutenberg by frequency. With a 
-battery of 20k words, that's actually *20000^4* bits of entropy (or around 
-    *2^54*)!
+battery of 20k words, that's actually *20000^4* combinations (or around *54* 
+    bits of entropy)!
 
 [words]:http://en.wiktionary.org/wiki/Wiktionary:Frequency_lists#Project_Gutenberg
 
