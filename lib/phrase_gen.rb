@@ -15,11 +15,28 @@ class PhraseGen
   #     #=> [3928, 49, 1948, 5821]
   #
   def digest(str, count, max=dict.length)
-    require 'digest/sha2'
-    hash = Digest::SHA2.new << str
+    hash = derive(str)
     digits = max.to_s(16).size
     hashes = hash.to_s.scan(/.{#{digits}}/)[0...count]
     hashes.map { |h| h.to_i(16) * max / (16**digits) }
+  end
+
+  # Derives a key from a master password by hashing it multiple times with
+  # different salts to prevent rainbow table attacks.
+  # See: https://en.wikipedia.org/wiki/PBKDF2
+  def derive(str, iters=2000)
+    require 'digest/sha2'
+
+    hash = str
+    iters.times do |i|
+      hash = Digest::SHA2.new << (hash.to_s.downcase + salt(i))
+    end
+    hash
+  end
+
+  # Returns a salt
+  def salt(i)
+    dict[i]
   end
 
   # Returns an array of words.
