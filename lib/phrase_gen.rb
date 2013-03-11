@@ -24,6 +24,10 @@ class PhraseGen
   # Derives a key from a master password by hashing it multiple times with
   # different salts to prevent rainbow table attacks.
   # See: https://en.wikipedia.org/wiki/PBKDF2
+  #
+  #    PhraseGen.new.derive('hello', 4000)
+  #    #=> '8a82bc24dea34...'
+  #
   def derive(str, iters=4000)
     require 'digest/sha2'
 
@@ -34,9 +38,15 @@ class PhraseGen
     hash
   end
 
-  # Returns a salt
-  def salt(i)
-    dict[i]
+  # Returns a salt for iteration number `i` of given length `len`. Salts are
+  # used in derivation.
+  def salt(i, len=64)
+    salt = ''
+    loop do
+      salt += dict[i]
+      return salt if salt.size >= len
+      i += 1
+    end
   end
 
   # Returns an array of words.
