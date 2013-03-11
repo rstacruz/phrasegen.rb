@@ -12,9 +12,10 @@ Generates a passphrase from a given input string.
 Where are the words from?
 -------------------------
 
-From the [top 10,000 words][10k] in Project Gutenberg by frequency. With a battery of 10k words, that's actually *10^16* bits of entropy!
+From the [top 20,000 words][words] in Project Gutenberg by frequency. With a 
+battery of 20k words, that's actually *20^16* bits of entropy!
 
-[10k]: http://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/PG/2006/04/1-10000
+[words]:http://en.wiktionary.org/wiki/Wiktionary:Frequency_lists#Project_Gutenberg
 
 Why?
 ----
