@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# -s == safe (mask with stars)
+
+require File.expand_path('../../lib/phrase_gen.rb', __FILE__)
+extend PhraseGen::Helpers
+
+pwd = askpass('Input: ')
+out = PhraseGen.new.from_str(pwd)
+
+require 'clipboard'
+Clipboard.copy out
+
+puts out
