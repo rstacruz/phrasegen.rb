@@ -21,8 +21,8 @@ battery of 20k words, that's actually *20000^4* combinations (or around *54*
 Why? (pros)
 -----------
 
- * More secure than Supergenpass (I think) against brute-force and rainbow table 
- attacks (no MD5, many iterations with salts, etc).
+ * Secures the master password better than Supergenpass against brute-force and
+ rainbow table attacks (no MD5, many iterations with salts, etc).
 
  * Easier to type on your mobile phone.
 
