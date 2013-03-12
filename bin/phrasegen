@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # -s == safe (mask with stars)
 
-require File.expand_path('../../lib/phrase_gen.rb', __FILE__)
-extend PhraseGen::Helpers
+require File.expand_path('../../lib/phrasegen.rb', __FILE__)
+extend Phrasegen::Helpers
 
 pwd = askpass('Input: ')
 out = PhraseGen.new.from_str(pwd)

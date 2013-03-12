@@ -36,10 +36,16 @@ Why not? (cons)
 panel assumes that passwords follow a certain format.
 
 If you're to assume that the passwords don't follow a format and are encoded in 
-Latin-1 (*7* bits of entropy per character), an 8-character password will get 
+Latin-1 (7 bits of entropy per character), an 8-character password will get 
 you *56* bits of entropy.
 
 (...but then again, you can't just measure password strength this way. If a 
 malicious attacker obtains stolen hashes from an online service you use, 
 8-character passwords are easily cracked.)
 
+But it's slow!
+--------------
+
+Yes that's a feature. Your master password is hashed through thousands of
+iterations to protect it in the event that a malicious attacker got your
+generated password.

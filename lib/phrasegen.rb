@@ -1,4 +1,4 @@
-class PhraseGen
+class Phrasegen
   # Generates a phrase from a string.
   #
   #     PhraseGen.new.from_str('facebook.com hello_there', 4)
@@ -25,10 +25,10 @@ class PhraseGen
   # different salts to prevent rainbow table attacks.
   # See: https://en.wikipedia.org/wiki/PBKDF2
   #
-  #    PhraseGen.new.derive('hello', 4000)
+  #    PhraseGen.new.derive('hello', 2000)
   #    #=> '8a82bc24dea34...'
   #
-  def derive(str, iters=4000)
+  def derive(str, iters=2000)
     require 'digest/sha2'
 
     hash = str
@@ -51,12 +51,12 @@ class PhraseGen
 
   # Returns an array of words.
   def dict
-    require File.expand_path('../phrase_gen/words.rb', __FILE__)
+    require File.expand_path('../phrasegen/words.rb', __FILE__)
     WORDLIST
   end
 end
 
-module PhraseGen::Helpers
+module Phrasegen::Helpers
   def askpass(msg)
     if ARGV.include?('-s')
       require 'highline'
