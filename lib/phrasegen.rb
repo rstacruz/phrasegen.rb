@@ -51,8 +51,10 @@ class Phrasegen
 
   # Returns an array of words.
   def dict
-    require File.expand_path('../phrasegen/words.rb', __FILE__)
-    WORDLIST
+    @dict ||= begin
+      require File.expand_path('../phrasegen/words.rb', __FILE__)
+      WORDS_10K #+ WORDS_20K
+    end
   end
 end
 

@@ -19,8 +19,8 @@ Install
 Where are the words from?
 -------------------------
 
-From the [top 20,000 words][words] in Project Gutenberg by frequency. With a 
-battery of 20k words, that's actually *20000^4* combinations (or around *54* 
+From the [top 10,000 words][words] in Project Gutenberg by frequency. With a 
+battery of 10k words, that's actually *10000^4* combinations (or around *53* 
     bits of entropy)!
 
 [words]:http://en.wiktionary.org/wiki/Wiktionary:Frequency_lists#Project_Gutenberg
