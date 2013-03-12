@@ -56,14 +56,4 @@ class Phrasegen
   end
 end
 
-module Phrasegen::Helpers
-  def askpass(msg)
-    if ARGV.include?('-s')
-      require 'highline'
-      HighLine.new.ask(msg) { |q| q.echo = '*' }
-    else
-      print msg
-      STDIN.readline[0...-1]
-    end
-  end
-end
+require File.expand_path('../phrasegen/version.rb', __FILE__)

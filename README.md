@@ -9,6 +9,13 @@ Generates a passphrase from a given input string.
 
 ...and copies it to the clipboard.
 
+Install
+-------
+
+    $ gem install phrasegen
+
+...then just type `phrasegen` when installed.
+
 Where are the words from?
 -------------------------
 

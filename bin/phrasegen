@@ -2,10 +2,11 @@
 # -s == safe (mask with stars)
 
 require File.expand_path('../../lib/phrasegen.rb', __FILE__)
+require File.expand_path('../../lib/phrasegen/helpers.rb', __FILE__)
 extend Phrasegen::Helpers
 
 pwd = askpass('Input: ')
-out = PhraseGen.new.from_str(pwd)
+out = Phrasegen.new.from_str(pwd)
 
 require 'clipboard'
 Clipboard.copy out
