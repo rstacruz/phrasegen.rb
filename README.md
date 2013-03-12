@@ -4,8 +4,8 @@ Phrasegen.rb
 Generates a passphrase from a given input string.
 
     $ phrasegen
-    Input: facebook.com master_password
-    disinterested evils derby burial
+    Input: twitter.com master_password
+    rebels ward dwarf diligence
 
 ...and copies it to the clipboard.
 
@@ -31,7 +31,7 @@ Why? (pros)
  * Secures the master password better than Supergenpass against brute-force and
  rainbow table attacks (no MD5, many iterations with salts, etc).
 
- * Easier to type on your mobile phone.
+ * The generated passwords are easier to type on your mobile phone.
 
 ![xkcd][img]
 [img]: http://imgs.xkcd.com/comics/password_strength.png
